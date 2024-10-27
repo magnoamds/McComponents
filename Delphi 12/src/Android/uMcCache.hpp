@@ -63,7 +63,7 @@ public:
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout};
-	__property Umcconnection::TMcConnection* McConnection = {read=FMcConnection, write=FMcConnection};
+	__property Umcconnection::TMcConnection* Connection = {read=FMcConnection, write=FMcConnection};
 	__property bool ClearOnClose = {read=FClearOnClose, write=FClearOnClose, default=1};
 };
 

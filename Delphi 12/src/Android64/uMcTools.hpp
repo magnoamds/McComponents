@@ -75,7 +75,7 @@ public:
 	__classmethod void __fastcall JSONObjectToDataSet(Umcjson::IMcJSONObject AJSONObject, Data::Db::TDataSet* ADataSet);
 	__classmethod Umcjson::IMcJSONArray __fastcall DataSetToJSONArray(Data::Db::TDataSet* ADataSet);
 	__classmethod void __fastcall JSONArrayToDataSet(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);
-	__classmethod Umcjson::IMcJSONObject __fastcall DataSetToJSONPersistence(Umctypes::TMcOperation AOperation, Data::Db::TDataSet* ADataSet, Umcprimarykey::TMcPrimaryKeys* APrimaryKey);
+	__classmethod Umcjson::IMcJSONObject __fastcall DataSetToJSONPersistence(Umctypes::TMcOperation AOperation, Data::Db::TDataSet* ADataSet, Umcprimarykey::TMcPrimaryKeys* APrimaryKey, bool AAllFields = false);
 public:
 	/* TObject.Create */ inline __fastcall TMcTools() : System::TObject() { }
 	/* TObject.Destroy */ inline __fastcall virtual ~TMcTools() { }

@@ -78,7 +78,7 @@ public:
 	void __fastcall LoadFieldDefs();
 	void __fastcall LoadData();
 	void __fastcall ClearItems();
-	void __fastcall LoadRec(Umctypes::TMcOperation AOperation, Data::Db::TDataSet* ADataSet);
+	void __fastcall LoadRec(Umctypes::TMcOperation AOperation, Data::Db::TDataSet* ADataSet, bool AAllFields = false);
 	void __fastcall AddItem();
 	Umcjson::IMcJSONArray __fastcall Persistence();
 	bool __fastcall RequestOpen();
@@ -86,7 +86,7 @@ public:
 	void __fastcall DoBeforeOpen(Data::Db::TDataSource* ADataSource = (Data::Db::TDataSource*)(0x0), System::UnicodeString AMasterFields = System::UnicodeString(), System::UnicodeString ADetailFields = System::UnicodeString());
 	void __fastcall DoAfterRefresh(Data::Db::TDataSource* ADataSource = (Data::Db::TDataSource*)(0x0), System::UnicodeString AMasterFields = System::UnicodeString(), System::UnicodeString ADetailFields = System::UnicodeString());
 	void __fastcall DoAfterOpen();
-	void __fastcall DoBeforePost();
+	void __fastcall DoBeforePost(bool AAllFields = false);
 	void __fastcall DoAfterPost();
 	void __fastcall DoBeforeDelete();
 	void __fastcall DoExecSQL();

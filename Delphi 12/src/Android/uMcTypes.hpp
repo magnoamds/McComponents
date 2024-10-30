@@ -25,7 +25,7 @@ namespace Umctypes
 //-- type declarations -------------------------------------------------------
 enum class DECLSPEC_DENUM TMcAction : unsigned char { mcConnExecSQL, mcOpen, mcPersistence, mcExecSQL, mcFile };
 
-enum class DECLSPEC_DENUM TMcOperation : unsigned char { mcInsert, mcUpdate, mcDelete };
+enum class DECLSPEC_DENUM TMcOperation : unsigned char { mcNone, mcInsert, mcUpdate, mcDelete };
 
 enum class DECLSPEC_DENUM TMcFileOption : unsigned char { mcUpload, mcDownload, mcList };
 

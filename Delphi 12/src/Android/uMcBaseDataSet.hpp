@@ -63,6 +63,7 @@ private:
 	TMcCached* FCache;
 	Umcjson::IMcJSONObject FJSONRecord;
 	TMcPrimaryKeys* FMcPrimaryKeys;
+	Umctypes::TMcOperation FOperation;
 	void __fastcall SetSQL(System::Classes::TStrings* const AValue);
 	void __fastcall SetMcPrimaryKeys(TMcPrimaryKeys* const AValue);
 	void __fastcall OnOnChangeSQL(System::TObject* Sender);
@@ -87,6 +88,7 @@ public:
 	void __fastcall DoAfterRefresh(Data::Db::TDataSource* ADataSource = (Data::Db::TDataSource*)(0x0), System::UnicodeString AMasterFields = System::UnicodeString(), System::UnicodeString ADetailFields = System::UnicodeString());
 	void __fastcall DoAfterOpen();
 	void __fastcall DoBeforePost();
+	void __fastcall DoAfterPost();
 	void __fastcall DoBeforeDelete();
 	void __fastcall DoExecSQL();
 	__property bool Loading = {read=FLoading, write=FLoading, nodefault};

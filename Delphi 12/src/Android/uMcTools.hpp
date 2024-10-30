@@ -42,6 +42,8 @@ private:
 	__classmethod void __fastcall FieldToJSONValue(Data::Db::TField* const AField, Umcjson::IMcJSONObject AJSONObject);
 	__classmethod void __fastcall JSONValueToParam(Umcjson::IMcJSONValue AJSONValue, Data::Db::TParam* AParam);
 	__classmethod System::UnicodeString __fastcall FieldValueToString(Data::Db::TField* AField);
+	__classmethod System::UnicodeString __fastcall EncryptString(const System::UnicodeString AValue);
+	__classmethod System::UnicodeString __fastcall DecryptString(const System::UnicodeString AValue);
 	
 public:
 	__classmethod void __fastcall DecodeMDString(System::UnicodeString ASource, System::Classes::TStrings* AList);
@@ -59,8 +61,10 @@ public:
 	__classmethod Data::Db::TParamType __fastcall StringToParamType(System::UnicodeString AValue);
 	__classmethod System::UnicodeString __fastcall FieldAttributesToString(Data::Db::TFieldAttributes AValue);
 	__classmethod Data::Db::TFieldAttributes __fastcall StringToFieldAttributes(System::UnicodeString AValue);
-	__classmethod System::UnicodeString __fastcall StreamToBase64(System::Classes::TStream* AStream);
+	__classmethod System::UnicodeString __fastcall StreamToBase64(System::Classes::TMemoryStream* AStream);
 	__classmethod System::Classes::TMemoryStream* __fastcall Base64ToStream(System::UnicodeString ABase64);
+	__classmethod System::UnicodeString __fastcall OnCrypt(System::UnicodeString AValue);
+	__classmethod System::UnicodeString __fastcall OnDecrypt(System::UnicodeString AValue);
 	__classmethod Umcjson::IMcJSONArray __fastcall FieldDefsToJSONArray(Data::Db::TDataSet* ADataSet);
 	__classmethod void __fastcall JSONArrayToFieldDefs(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);
 	__classmethod void __fastcall ConfigProviderFlags(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);

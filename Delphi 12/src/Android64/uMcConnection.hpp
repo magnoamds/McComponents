@@ -103,7 +103,7 @@ public:
 	bool __fastcall ExecSQL(const System::UnicodeString ASQL);
 	bool __fastcall FileUpload(const System::UnicodeString AFile, const System::UnicodeString ADirectory = System::UnicodeString())/* overload */;
 	bool __fastcall FileUpload(System::Classes::TStream* const AFile, const System::UnicodeString AName, const System::UnicodeString ADirectory = System::UnicodeString())/* overload */;
-	System::Classes::TMemoryStream* __fastcall FileDownload(const System::UnicodeString AName, const System::UnicodeString ADirectory = System::UnicodeString());
+	System::Classes::TStream* __fastcall FileDownload(const System::UnicodeString AName, const System::UnicodeString ADirectory = System::UnicodeString());
 	Umcjson::IMcJSONArray __fastcall FileList(const System::UnicodeString ADirectory = System::UnicodeString());
 	
 __published:

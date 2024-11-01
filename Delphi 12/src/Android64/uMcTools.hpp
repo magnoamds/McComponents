@@ -20,6 +20,7 @@
 #include <System.SysUtils.hpp>
 #include <Data.DB.hpp>
 #include <System.TypInfo.hpp>
+#include <uMcCommons.hpp>
 #include <uMcJSON.hpp>
 #include <uMcConsts.hpp>
 #include <uMcTypes.hpp>
@@ -43,6 +44,8 @@ private:
 	__classmethod System::UnicodeString __fastcall FieldValueToString(Data::Db::TField* AField);
 	__classmethod System::UnicodeString __fastcall EncryptString(const System::UnicodeString AValue);
 	__classmethod System::UnicodeString __fastcall DecryptString(const System::UnicodeString AValue);
+	__classmethod void __fastcall EncryptStream(System::Classes::TMemoryStream* const ASource, System::Classes::TMemoryStream* const ATarget, Umccommons::TMcStreamKey* AStreamKey);
+	__classmethod void __fastcall DecryptStream(System::Classes::TMemoryStream* const ASource, System::Classes::TMemoryStream* const ATarget, Umccommons::TMcStreamKey* AStreamKey);
 	
 public:
 	__classmethod void __fastcall DecodeMDString(System::UnicodeString ASource, System::Classes::TStrings* AList);
@@ -62,8 +65,12 @@ public:
 	__classmethod Data::Db::TFieldAttributes __fastcall StringToFieldAttributes(System::UnicodeString AValue);
 	__classmethod System::UnicodeString __fastcall StreamToBase64(System::Classes::TMemoryStream* AStream);
 	__classmethod System::Classes::TMemoryStream* __fastcall Base64ToStream(System::UnicodeString ABase64);
-	__classmethod System::UnicodeString __fastcall OnCrypt(System::UnicodeString AValue);
-	__classmethod System::UnicodeString __fastcall OnDecrypt(System::UnicodeString AValue);
+	__classmethod System::UnicodeString __fastcall OnEnCryptString(System::UnicodeString AValue);
+	__classmethod System::UnicodeString __fastcall OnDecryptString(System::UnicodeString AValue);
+	__classmethod System::UnicodeString __fastcall OnEncryptToBase64(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
+	__classmethod System::UnicodeString __fastcall OnDecryptFromBase64(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
+	__classmethod System::Classes::TStream* __fastcall OnEncryptToStream(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
+	__classmethod System::UnicodeString __fastcall OnDecryptFromStream(System::Classes::TMemoryStream* const AValue, Umccommons::TMcStreamKey* AStreamKey);
 	__classmethod Umcjson::IMcJSONArray __fastcall FieldDefsToJSONArray(Data::Db::TDataSet* ADataSet);
 	__classmethod void __fastcall JSONArrayToFieldDefs(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);
 	__classmethod void __fastcall ConfigProviderFlags(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);

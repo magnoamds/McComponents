@@ -39,9 +39,11 @@ private:
 	System::UnicodeString FMyContent;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
 	System::UnicodeString FSecurityKey;
+	Umccommons::TMcStreamKey* FStreamKey;
 	System::Classes::TNotifyEvent FBeforeExecute;
 	Umccommons::TMcEvent FOnError;
 	System::UnicodeString __fastcall GetAbout();
+	System::UnicodeString __fastcall OnResource(const System::UnicodeString AValue);
 	
 protected:
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation AOperation);
@@ -50,8 +52,10 @@ public:
 	__fastcall virtual TMcServer(System::Classes::TComponent* AOwner);
 	__fastcall virtual ~TMcServer();
 	System::UnicodeString __fastcall Resource(const System::UnicodeString AValue)/* overload */;
+	System::Classes::TStream* __fastcall Resource(System::Classes::TStream* const AValue)/* overload */;
 	__property System::UnicodeString MyContent = {read=FMyContent};
 	__property Umcparamsdb::TMcParamsDB* ParamsDB = {read=FMParamsDB};
+	__property Umccommons::TMcStreamKey* StreamKey = {read=FStreamKey, write=FStreamKey};
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout};

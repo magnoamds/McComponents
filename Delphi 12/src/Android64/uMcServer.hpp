@@ -34,7 +34,7 @@ class PASCALIMPLEMENTATION TMcServer : public System::Classes::TComponent
 	typedef System::Classes::TComponent inherited;
 	
 private:
-	Umcdriverbase::TMcDriverBase* FMcEngine;
+	Umcdriverbase::TMcDriverBase* FDriver;
 	System::UnicodeString FMyContent;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
 	System::UnicodeString FSecurityKey;
@@ -58,7 +58,7 @@ public:
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout};
-	__property Umcdriverbase::TMcDriverBase* McEngine = {read=FMcEngine, write=FMcEngine};
+	__property Umcdriverbase::TMcDriverBase* Driver = {read=FDriver, write=FDriver};
 	__property System::UnicodeString SecurityKey = {read=FSecurityKey, write=FSecurityKey};
 	__property System::Classes::TNotifyEvent BeforeExecute = {read=FBeforeExecute, write=FBeforeExecute};
 	__property Umccommons::TMcEvent OnError = {read=FOnError, write=FOnError};

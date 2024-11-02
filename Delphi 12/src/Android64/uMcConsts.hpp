@@ -108,8 +108,8 @@ extern DELPHI_PACKAGE System::ResourceString _sMcIncompatibleVersion;
 #define Umcconsts_sMcIncompatibleVersion System::LoadResourceString(&Umcconsts::_sMcIncompatibleVersion)
 extern DELPHI_PACKAGE System::ResourceString _sConnectionNotEstablished;
 #define Umcconsts_sConnectionNotEstablished System::LoadResourceString(&Umcconsts::_sConnectionNotEstablished)
-extern DELPHI_PACKAGE System::ResourceString _sMcEngineNotDefinedInHcServer;
-#define Umcconsts_sMcEngineNotDefinedInHcServer System::LoadResourceString(&Umcconsts::_sMcEngineNotDefinedInHcServer)
+extern DELPHI_PACKAGE System::ResourceString _sMcDriverNotDefinedInMcServer;
+#define Umcconsts_sMcDriverNotDefinedInMcServer System::LoadResourceString(&Umcconsts::_sMcDriverNotDefinedInMcServer)
 extern DELPHI_PACKAGE System::ResourceString _sResourceInvalid;
 #define Umcconsts_sResourceInvalid System::LoadResourceString(&Umcconsts::_sResourceInvalid)
 extern DELPHI_PACKAGE System::ResourceString _sResourceEmpty;

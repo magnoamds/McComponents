@@ -1,4 +1,4 @@
-## :zap: Série de vídeo sobre o uso do McComponents
+## :zap: Série de vídeos sobre o uso do McComponents.
 #### Instalação
 * https://youtu.be/-Ptfx6zfUyI?feature=shared
 #### McServer

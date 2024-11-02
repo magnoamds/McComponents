@@ -21,4 +21,15 @@ object DM: TDM
     Left = 208
     Top = 64
   end
+  object McDriverFireDAC: TMcDriverFireDAC
+    Connection = FDConnection
+    FreeConnection = False
+    Left = 80
+    Top = 168
+  end
+  object McServer: TMcServer
+    Driver = McDriverFireDAC
+    Left = 208
+    Top = 168
+  end
 end

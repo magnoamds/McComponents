@@ -32,6 +32,33 @@ begin
       ARes.ContentType('application/json')
           .Send(DM.Produtos());
     end);
+
+  THorse.Post('/modotexto',
+    procedure(AReq: THorseRequest; ARes: THorseResponse)
+    begin
+      try
+        ARes.ContentType('text/html')
+            .Send( DM.McServer.Resource(AReq.Body) );
+      except
+        on E:exception do
+          ARes.ContentType('text/html')
+              .Status(500)
+              .Send(E.Message);
+      end;
+    end);
+
+  THorse.Post('/modobinario',
+    procedure(AReq: THorseRequest; ARes: THorseResponse)
+    begin
+      try
+        ARes.SendFile(DM.McServer.Resource(AReq.ContentFields.Field('mcdata').AsStream));
+      except
+        on E:exception do
+          ARes.ContentType('text/html')
+              .Status(500)
+              .Send(E.Message);
+      end;
+    end);
 end;
 
 end.

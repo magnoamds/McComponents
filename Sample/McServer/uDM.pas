@@ -6,12 +6,14 @@ uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error,
   FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.ConsoleUI.Wait, FireDAC.Phys.IBBase,
-  Data.DB, FireDAC.Comp.Client, FireDAC.DApt;
+  Data.DB, FireDAC.Comp.Client, FireDAC.DApt, uMcServer, uMcDriverBase, uMcDriverFireDAC;
 
 type
   TDM = class(TDataModule)
     FDConnection: TFDConnection;
     FDPhysFBDriverLink: TFDPhysFBDriverLink;
+    McDriverFireDAC: TMcDriverFireDAC;
+    McServer: TMcServer;
     procedure DataModuleDestroy(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
   private

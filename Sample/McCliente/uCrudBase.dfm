@@ -3,7 +3,7 @@ object F_CrudBase: TF_CrudBase
   Top = 0
   Caption = 'CRUD Base'
   ClientHeight = 546
-  ClientWidth = 718
+  ClientWidth = 950
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,17 +15,24 @@ object F_CrudBase: TF_CrudBase
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 718
-    Height = 81
+    Width = 950
+    Height = 89
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
     object lbl_Record: TLabel
-      Left = 480
-      Top = 32
+      Left = 448
+      Top = 24
       Width = 70
       Height = 17
       Caption = 'Record(s): 0'
+    end
+    object lbl_Tempo: TLabel
+      Left = 448
+      Top = 47
+      Width = 75
+      Height = 17
+      Caption = 'Tempo: 0 ms'
     end
     object Button1: TButton
       Left = 32
@@ -38,18 +45,73 @@ object F_CrudBase: TF_CrudBase
     end
     object DBNavigator1: TDBNavigator
       Left = 168
-      Top = 28
+      Top = 19
       Width = 240
       Height = 25
       DataSource = DataSource
       TabOrder = 1
     end
+    object Panel2: TPanel
+      AlignWithMargins = True
+      Left = 784
+      Top = 3
+      Width = 156
+      Height = 83
+      Margins.Right = 10
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 2
+      object DBImage: TDBImage
+        Left = 67
+        Top = 0
+        Width = 89
+        Height = 83
+        Align = alRight
+        DataField = 'PHOTO'
+        DataSource = DataSource
+        Proportional = True
+        TabOrder = 0
+        ExplicitLeft = -8
+        ExplicitTop = -8
+        ExplicitWidth = 105
+        ExplicitHeight = 105
+      end
+      object btn_ClearImg: TButton
+        Left = 3
+        Top = 5
+        Width = 58
+        Height = 25
+        Caption = 'Clear'
+        TabOrder = 1
+        OnClick = btn_ClearImgClick
+      end
+      object btn_LoadImg: TButton
+        Left = 3
+        Top = 53
+        Width = 58
+        Height = 25
+        Caption = 'Load'
+        TabOrder = 2
+        OnClick = btn_LoadImgClick
+      end
+    end
+    object DBMemo: TDBMemo
+      Left = 596
+      Top = 0
+      Width = 185
+      Height = 89
+      Align = alRight
+      DataField = 'OBS'
+      DataSource = DataSource
+      TabOrder = 3
+      ExplicitLeft = 584
+    end
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 81
-    Width = 718
-    Height = 465
+    Top = 89
+    Width = 950
+    Height = 457
     Align = alClient
     DataSource = DataSource
     TabOrder = 1
@@ -152,6 +214,8 @@ object F_CrudBase: TF_CrudBase
     UpdateOptions.CheckRequired = False
     UpdateOptions.AutoCommitUpdates = True
     StoreDefs = True
+    Cache.Active = True
+    Cache.McCache = McCache
     Connection = DM.McConnection
     PrimaryKeys = <
       item
@@ -162,9 +226,18 @@ object F_CrudBase: TF_CrudBase
     Params = <>
     SQL.Strings = (
       'SELECT *'
-      ' FROM produto '
+      ' FROM produto'
       'ORDER BY id DESC')
     Left = 184
+    Top = 176
+  end
+  object OpenPictureDialog: TOpenPictureDialog
+    Left = 544
+    Top = 184
+  end
+  object McCache: TMcCache
+    Connection = DM.McConnection
+    Left = 320
     Top = 176
   end
 end

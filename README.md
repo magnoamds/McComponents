@@ -6,3 +6,4 @@
 * Parte 02 https://youtu.be/fXhBZ_WaHwA?feature=shared
 #### McCliente
 * Parte 01 https://youtu.be/qRJ_IiawXDc?feature=shared
+* Parte 02 https://youtu.be/yy3JEHnHtB0?feature=shared

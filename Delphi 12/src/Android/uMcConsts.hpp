@@ -29,11 +29,11 @@ namespace Umcconsts
 static _DELPHI_CONST System::WideChar _MC_COMPATIBILITY = (System::WideChar)(0x34);
 #define _AVISO u"The evaluation period has expired!"
 #define _KEY_ACTIVE u"active"
-#define _KEY_SECURITYKEY u"securityKey"
 #define _KEY_MYCONTENT u"myContent"
 #define _KEY_PARAMSDB u"paramsdb"
 #define _KEY_HCACTION u"action"
 #define _KEY_OPERATION u"operation"
+#define _KEY_QRY_NAME u"qryname"
 #define _KEY_ITEMS u"items"
 #define _KEY_SQL u"sql"
 #define _KEY_PRIMARYKEY u"primaryKey"
@@ -80,6 +80,8 @@ extern DELPHI_PACKAGE System::ResourceString _sDataSetNotDefined;
 #define Umcconsts_sDataSetNotDefined System::LoadResourceString(&Umcconsts::_sDataSetNotDefined)
 extern DELPHI_PACKAGE System::ResourceString _sSQLNotDefined;
 #define Umcconsts_sSQLNotDefined System::LoadResourceString(&Umcconsts::_sSQLNotDefined)
+extern DELPHI_PACKAGE System::ResourceString _sQryNameNotFound;
+#define Umcconsts_sQryNameNotFound System::LoadResourceString(&Umcconsts::_sQryNameNotFound)
 extern DELPHI_PACKAGE System::ResourceString _sSQLNotFound;
 #define Umcconsts_sSQLNotFound System::LoadResourceString(&Umcconsts::_sSQLNotFound)
 extern DELPHI_PACKAGE System::ResourceString _sRecordNotFound;

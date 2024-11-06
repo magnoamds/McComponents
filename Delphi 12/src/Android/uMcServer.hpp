@@ -38,7 +38,6 @@ private:
 	Umcdriverbase::TMcDriverBase* FDriver;
 	System::UnicodeString FMyContent;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
-	System::UnicodeString FSecurityKey;
 	Umccommons::TMcStreamKey* FStreamKey;
 	System::Classes::TNotifyEvent FBeforeExecute;
 	Umccommons::TMcEvent FOnError;
@@ -60,7 +59,6 @@ public:
 __published:
 	__property System::UnicodeString About = {read=GetAbout};
 	__property Umcdriverbase::TMcDriverBase* Driver = {read=FDriver, write=FDriver};
-	__property System::UnicodeString SecurityKey = {read=FSecurityKey, write=FSecurityKey};
 	__property System::Classes::TNotifyEvent BeforeExecute = {read=FBeforeExecute, write=FBeforeExecute};
 	__property Umccommons::TMcEvent OnError = {read=FOnError, write=FOnError};
 };

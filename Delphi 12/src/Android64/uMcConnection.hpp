@@ -88,7 +88,6 @@ private:
 	TMcProxy* FProxy;
 	System::UnicodeString FMyContent;
 	int FTimeout;
-	System::UnicodeString FSecurityKey;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
 	bool FBinary;
 	Umccommons::TMcStreamKey* FStreamKey;
@@ -117,7 +116,6 @@ __published:
 	__property TMcProxy* Proxy = {read=FProxy, write=FProxy};
 	__property System::UnicodeString MyContent = {read=FMyContent, write=FMyContent};
 	__property int Timeout = {read=FTimeout, write=FTimeout, default=30000};
-	__property System::UnicodeString SecurityKey = {read=FSecurityKey, write=FSecurityKey};
 	__property Umcparamsdb::TMcParamsDB* ParamsDB = {read=FMParamsDB, write=FMParamsDB};
 	__property bool Binary = {read=FBinary, write=FBinary, default=1};
 	__property System::Classes::TNotifyEvent OnBeforeConnect = {read=FOnBeforeConnect, write=FOnBeforeConnect};

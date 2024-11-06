@@ -44,7 +44,7 @@ private:
 	Umcenginecontract::_di_IMcEngine FMcEngine;
 	void __fastcall SetParamsDataSet(Umcenginecontract::_di_IMcEngine AMcEngine, Umcjson::IMcJSONArray AJSONArray);
 	System::UnicodeString __fastcall McFile(Umcjson::IMcJSONObject AJSONObject);
-	System::UnicodeString __fastcall Open(Umcjson::IMcJSONObject AJSONObject);
+	System::UnicodeString __fastcall Open(Umcjson::IMcJSONArray AJSONItems);
 	System::UnicodeString __fastcall Persistence(Umcjson::IMcJSONArray AJSONItems);
 	System::UnicodeString __fastcall ExecSQL(Umcjson::IMcJSONArray AJSONItems);
 	System::UnicodeString __fastcall ConnectionExecSQL(Umcjson::IMcJSONObject AJSONObject);

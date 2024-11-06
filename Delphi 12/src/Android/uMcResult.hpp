@@ -35,7 +35,6 @@ __interface  INTERFACE_UUID("{D6A418A6-BB22-41FE-BFFC-F0C88E5B2723}") IMcResult 
 {
 	virtual _di_IMcResult __fastcall Success(const bool Value) = 0 ;
 	virtual _di_IMcResult __fastcall Message(const System::UnicodeString Value) = 0 ;
-	virtual _di_IMcResult __fastcall FieldDefs(const Umcjson::IMcJSONArray Value) = 0 ;
 	virtual _di_IMcResult __fastcall Data(const System::UnicodeString Value) = 0 /* overload */;
 	virtual _di_IMcResult __fastcall Data(const Umcjson::IMcJSONObject Value) = 0 /* overload */;
 	virtual _di_IMcResult __fastcall Data(const Umcjson::IMcJSONArray Value) = 0 /* overload */;
@@ -57,7 +56,6 @@ public:
 	__classmethod _di_IMcResult __fastcall New(bool ASuccess = true);
 	_di_IMcResult __fastcall Success(const bool Value);
 	_di_IMcResult __fastcall Message(const System::UnicodeString Value);
-	_di_IMcResult __fastcall FieldDefs(const Umcjson::IMcJSONArray Value);
 	_di_IMcResult __fastcall Data(const System::UnicodeString Value)/* overload */;
 	_di_IMcResult __fastcall Data(const Umcjson::IMcJSONObject Value)/* overload */;
 	_di_IMcResult __fastcall Data(const Umcjson::IMcJSONArray Value)/* overload */;

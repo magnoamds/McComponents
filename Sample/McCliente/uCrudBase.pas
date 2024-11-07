@@ -26,9 +26,15 @@ type
     btn_ClearImg: TButton;
     btn_LoadImg: TButton;
     McCache: TMcCache;
+    btn_Pendencia: TButton;
+    btn_CommitUpdates: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
     procedure btn_LoadImgClick(Sender: TObject);
     procedure btn_ClearImgClick(Sender: TObject);
+    procedure btn_PendenciaClick(Sender: TObject);
+    procedure btn_CommitUpdatesClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +58,17 @@ begin
     TBlobField(DBImage.DataSource.DataSet.FieldByName(DBImage.DataField)).Clear;
 end;
 
+procedure TF_CrudBase.btn_CommitUpdatesClick(Sender: TObject);
+begin
+  if McCache.UpdatePending then
+  begin
+    if McCache.CommitUpdates then
+      ShowMessage('Comitado com sucesso..')
+    else
+      ShowMessage('Deu error ao tentar commitar..');
+  end;
+end;
+
 procedure TF_CrudBase.btn_LoadImgClick(Sender: TObject);
 begin
   if DataSource.DataSet.State in dsEditModes then
@@ -59,6 +76,15 @@ begin
     if OpenPictureDialog.Execute then
       TBlobField(DBImage.DataSource.DataSet.FieldByName(DBImage.DataField)).LoadFromFile(OpenPictureDialog.FileName);
   end;
+end;
+
+procedure TF_CrudBase.btn_PendenciaClick(Sender: TObject);
+begin
+  if McCache.UpdatePending then
+//     McCache.RecordPending
+    ShowMessage('Sim existe pendências..')
+  else
+    ShowMessage('Não existe pendências..');
 end;
 
 procedure TF_CrudBase.Button1Click(Sender: TObject);
@@ -83,6 +109,11 @@ begin
     else
       DataSource.DataSet.Active := not DataSource.DataSet.Active;
   end;
+end;
+
+procedure TF_CrudBase.Button2Click(Sender: TObject);
+begin
+  McCache.Clear;
 end;
 
 class procedure TF_CrudBase.Execute;

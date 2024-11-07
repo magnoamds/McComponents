@@ -35,8 +35,8 @@ object F_CrudBase: TF_CrudBase
       Caption = 'Tempo: 0 ms'
     end
     object Button1: TButton
-      Left = 32
-      Top = 24
+      Left = 16
+      Top = 15
       Width = 90
       Height = 35
       Caption = 'Open/Close'
@@ -71,10 +71,6 @@ object F_CrudBase: TF_CrudBase
         DataSource = DataSource
         Proportional = True
         TabOrder = 0
-        ExplicitLeft = -8
-        ExplicitTop = -8
-        ExplicitWidth = 105
-        ExplicitHeight = 105
       end
       object btn_ClearImg: TButton
         Left = 3
@@ -104,7 +100,33 @@ object F_CrudBase: TF_CrudBase
       DataField = 'OBS'
       DataSource = DataSource
       TabOrder = 3
-      ExplicitLeft = 584
+    end
+    object btn_Pendencia: TButton
+      Left = 121
+      Top = 58
+      Width = 97
+      Height = 25
+      Caption = 'Tem Pend'#234'ncia'
+      TabOrder = 4
+      OnClick = btn_PendenciaClick
+    end
+    object btn_CommitUpdates: TButton
+      Left = 224
+      Top = 58
+      Width = 97
+      Height = 25
+      Caption = 'Cache Commit'
+      TabOrder = 5
+      OnClick = btn_CommitUpdatesClick
+    end
+    object Button2: TButton
+      Left = 327
+      Top = 58
+      Width = 97
+      Height = 25
+      Caption = 'Clear Cache'
+      TabOrder = 6
+      OnClick = Button2Click
     end
   end
   object DBGrid1: TDBGrid

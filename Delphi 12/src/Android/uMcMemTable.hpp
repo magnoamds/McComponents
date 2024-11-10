@@ -68,6 +68,7 @@ protected:
 	virtual void __fastcall InternalClose();
 	virtual void __fastcall DoBeforeOpen();
 	virtual void __fastcall DoAfterOpen();
+	virtual void __fastcall DoAfterClose();
 	virtual void __fastcall DoBeforeInsert();
 	virtual void __fastcall DoAfterInsert();
 	virtual void __fastcall DoBeforePost();

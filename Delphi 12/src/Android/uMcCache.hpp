@@ -56,6 +56,7 @@ public:
 	void __fastcall AddPersistence(const Umcjson::IMcJSONObject AJSONObject);
 	void __fastcall AddExecSQL(System::UnicodeString ASQL, Umcjson::IMcJSONArray AParams);
 	TMcCache* __fastcall Clear();
+	int __fastcall CacheCount();
 	bool __fastcall UpdatePending();
 	bool __fastcall CommitUpdates();
 	bool __fastcall ExecSQLPending();

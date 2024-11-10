@@ -19,6 +19,7 @@
 #include <System.Classes.hpp>
 #include <System.SysUtils.hpp>
 #include <Data.DB.hpp>
+#include <System.Generics.Collections.hpp>
 #include <uMcConnection.hpp>
 #include <uMcRestContract.hpp>
 #include <uMcCommons.hpp>
@@ -85,11 +86,12 @@ public:
 	bool __fastcall RequestOpen();
 	bool __fastcall RequestPersistence();
 	void __fastcall DoBeforeOpen(Data::Db::TDataSource* ADataSource = (Data::Db::TDataSource*)(0x0), System::UnicodeString AMasterFields = System::UnicodeString(), System::UnicodeString ADetailFields = System::UnicodeString());
-	void __fastcall DoAfterRefresh(Data::Db::TDataSource* ADataSource = (Data::Db::TDataSource*)(0x0), System::UnicodeString AMasterFields = System::UnicodeString(), System::UnicodeString ADetailFields = System::UnicodeString());
 	void __fastcall DoAfterOpen();
+	void __fastcall DoAfterClose();
 	void __fastcall DoBeforePost(bool AAllFields = false);
 	void __fastcall DoAfterPost();
 	void __fastcall DoBeforeDelete();
+	void __fastcall DoAfterScroll();
 	void __fastcall DoExecSQL();
 	__property bool Loading = {read=FLoading, write=FLoading, nodefault};
 	__property Data::Db::TParams* Params = {read=FParams, write=FParams};

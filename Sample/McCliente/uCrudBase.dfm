@@ -22,14 +22,14 @@ object F_CrudBase: TF_CrudBase
     TabOrder = 0
     object lbl_Record: TLabel
       Left = 448
-      Top = 24
+      Top = 11
       Width = 70
       Height = 17
       Caption = 'Record(s): 0'
     end
     object lbl_Tempo: TLabel
       Left = 448
-      Top = 47
+      Top = 34
       Width = 75
       Height = 17
       Caption = 'Tempo: 0 ms'
@@ -127,6 +127,23 @@ object F_CrudBase: TF_CrudBase
       Caption = 'Clear Cache'
       TabOrder = 6
       OnClick = Button2Click
+    end
+    object btn_QtdPendentes: TButton
+      Left = 18
+      Top = 58
+      Width = 97
+      Height = 25
+      Caption = 'Pendentes'
+      TabOrder = 7
+      OnClick = btn_QtdPendentesClick
+    end
+    object cbx_UseHcCache: TCheckBox
+      Left = 448
+      Top = 62
+      Width = 97
+      Height = 17
+      Caption = 'Use HcCache'
+      TabOrder = 8
     end
   end
   object DBGrid1: TDBGrid
@@ -236,7 +253,6 @@ object F_CrudBase: TF_CrudBase
     UpdateOptions.CheckRequired = False
     UpdateOptions.AutoCommitUpdates = True
     StoreDefs = True
-    Cache.Active = True
     Cache.McCache = McCache
     Connection = DM.McConnection
     PrimaryKeys = <

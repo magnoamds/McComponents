@@ -3,7 +3,7 @@ object DM: TDM
   Width = 381
   object McConnection: TMcConnection
     BaseURL = 'http://192.168.10.10:9095'
-    Resource = 'modobinario'
+    Resource = 'resource'
     ParamsDB.Port = 0
     Left = 80
     Top = 56

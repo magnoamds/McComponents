@@ -29,12 +29,15 @@ type
     btn_Pendencia: TButton;
     btn_CommitUpdates: TButton;
     Button2: TButton;
+    btn_QtdPendentes: TButton;
+    cbx_UseHcCache: TCheckBox;
     procedure Button1Click(Sender: TObject);
     procedure btn_LoadImgClick(Sender: TObject);
     procedure btn_ClearImgClick(Sender: TObject);
     procedure btn_PendenciaClick(Sender: TObject);
     procedure btn_CommitUpdatesClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure btn_QtdPendentesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -81,8 +84,15 @@ end;
 procedure TF_CrudBase.btn_PendenciaClick(Sender: TObject);
 begin
   if McCache.UpdatePending then
-//     McCache.RecordPending
     ShowMessage('Sim existe pendências..')
+  else
+    ShowMessage('Não existe pendências..');
+end;
+
+procedure TF_CrudBase.btn_QtdPendentesClick(Sender: TObject);
+begin
+  if McCache.UpdatePending then
+    ShowMessage(Format('Quantidades pendentes -> %d', [McCache.CacheCount]))
   else
     ShowMessage('Não existe pendências..');
 end;
@@ -105,6 +115,7 @@ begin
 
       lbl_Record.Caption := Format('Record(s): %s', [FormatFloat(',0',  DataSource.DataSet.RecordCount)]);
       lbl_Tempo.Caption := Format('Tempo: %s ms', [FormatFloat(',0', (lFim - lInicio))]);
+      McMemTable.Cache.Active := cbx_UseHcCache.Checked;
     end
     else
       DataSource.DataSet.Active := not DataSource.DataSet.Active;

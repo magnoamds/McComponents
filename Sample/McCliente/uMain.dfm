@@ -16,10 +16,19 @@ object F_Main: TF_Main
   object Button1: TButton
     Left = 32
     Top = 32
-    Width = 90
+    Width = 113
     Height = 35
     Caption = 'CRUD Base'
     TabOrder = 0
     OnClick = Button1Click
+  end
+  object btn_MestreDetalhe: TButton
+    Left = 32
+    Top = 73
+    Width = 113
+    Height = 35
+    Caption = 'Mestre-Detalhe'
+    TabOrder = 1
+    OnClick = btn_MestreDetalheClick
   end
 end

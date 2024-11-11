@@ -141,6 +141,10 @@
             <Form>F_CrudBase</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uMestreDetalhe.pas">
+            <Form>F_MestreDetalhe</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -177,12 +181,6 @@
                 <DeployFile LocalName="..\Exec\McCliente.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64">
                         <RemoteName>McCliente.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="..\Exec\McCliente.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win64">
-                        <RemoteName>McCliente.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

@@ -38,6 +38,7 @@ type
     procedure btn_CommitUpdatesClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure btn_QtdPendentesClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -135,6 +136,12 @@ begin
   finally
     FreeAndNil(F_CrudBase);
   end;
+end;
+
+procedure TF_CrudBase.FormCreate(Sender: TObject);
+begin
+  McMemTable.Connection := DM.McConnection;
+  McCache.Connection := DM.McConnection;
 end;
 
 end.

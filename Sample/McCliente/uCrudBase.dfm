@@ -11,6 +11,7 @@ object F_CrudBase: TF_CrudBase
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 17
   object Panel1: TPanel
     Left = 0

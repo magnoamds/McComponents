@@ -10,3 +10,4 @@
 * Parte 03 https://youtu.be/zGdmV3r3eXk?feature=shared  - McCache
 * Parte 04 https://youtu.be/TAcUK3jVasM?feature=shared  - McCache
 * Parte 05 https://youtu.be/Id6GvO_ochQ?feature=shared  - Mestre-Detalhe
+* Parte 06 https://youtu.be/tzsY7qkaVls?feature=shared  - SQL Dinâmico

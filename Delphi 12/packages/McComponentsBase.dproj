@@ -229,6 +229,12 @@
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\HcPaletteRun.bpl" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\Linux64\bplHcPaletteRun.so" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\Win64\HcPaletteRun.bpl" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\McComponentsBase.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>McComponentsBase.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\McComponentsBase.bpl" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>McComponentsBase.bpl</RemoteName>

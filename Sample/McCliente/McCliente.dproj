@@ -137,12 +137,16 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="uCrudBase.pas">
-            <Form>F_CrudBase</Form>
+        <DCCReference Include="uCrudDinamico.pas">
+            <Form>F_CrudDinamico</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uMestreDetalhe.pas">
             <Form>F_MestreDetalhe</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uCrudBase.pas">
+            <Form>F_CrudBase</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

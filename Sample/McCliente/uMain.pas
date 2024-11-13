@@ -10,9 +10,11 @@ type
   TF_Main = class(TForm)
     Button1: TButton;
     btn_MestreDetalhe: TButton;
+    Button2: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure btn_MestreDetalheClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,7 +28,7 @@ implementation
 
 {$R *.dfm}
 
-uses uDM, uCrudBase, uMestreDetalhe;
+uses uDM, uCrudBase, uMestreDetalhe, uCrudDinamico;
 
 procedure TF_Main.btn_MestreDetalheClick(Sender: TObject);
 begin
@@ -36,6 +38,11 @@ end;
 procedure TF_Main.Button1Click(Sender: TObject);
 begin
   TF_CrudBase.Execute();
+end;
+
+procedure TF_Main.Button2Click(Sender: TObject);
+begin
+  TF_CrudDinamico.Execute();
 end;
 
 procedure TF_Main.FormCreate(Sender: TObject);

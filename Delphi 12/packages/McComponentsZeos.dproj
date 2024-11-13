@@ -139,6 +139,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\src\McComponents.dcr"/>
+        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="bindengine.dcp"/>
         <DCCReference Include="xmlrtl.dcp"/>

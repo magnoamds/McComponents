@@ -30,6 +30,11 @@ package McComponentsUniDAC;
 {$IMPLICITBUILD ON}
 
 requires
+  {$IFDEF MsWindows}
+    {$IFDEF Win32}
+    designide,
+    {$ENDIF}
+  {$ENDIF}
   rtl,
   bindengine,
   soaprtl,

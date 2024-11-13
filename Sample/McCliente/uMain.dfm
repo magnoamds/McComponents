@@ -31,4 +31,13 @@ object F_Main: TF_Main
     TabOrder = 1
     OnClick = btn_MestreDetalheClick
   end
+  object Button2: TButton
+    Left = 32
+    Top = 114
+    Width = 113
+    Height = 35
+    Caption = 'SQL Din'#226'mico'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
 end

@@ -4,8 +4,9 @@ uses
   Vcl.Forms,
   uMain in 'uMain.pas' {F_Main},
   uDM in 'uDM.pas' {DM: TDataModule},
-  uCrudBase in 'uCrudBase.pas' {F_CrudBase},
-  uMestreDetalhe in 'uMestreDetalhe.pas' {F_MestreDetalhe};
+  uCrudDinamico in 'uCrudDinamico.pas' {F_CrudDinamico},
+  uMestreDetalhe in 'uMestreDetalhe.pas' {F_MestreDetalhe},
+  uCrudBase in 'uCrudBase.pas' {F_CrudBase};
 
 {$R *.res}
 

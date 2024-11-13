@@ -140,6 +140,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\src\McComponents.dcr"/>
+        <DCCReference Include="designide.dcp"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="soaprtl.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>

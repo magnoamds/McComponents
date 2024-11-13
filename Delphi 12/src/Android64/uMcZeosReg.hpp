@@ -17,6 +17,7 @@
 #include <System.hpp>
 #include <SysInit.hpp>
 #include <System.Classes.hpp>
+#include <System.SysUtils.hpp>
 
 //-- user supplied -----------------------------------------------------------
 

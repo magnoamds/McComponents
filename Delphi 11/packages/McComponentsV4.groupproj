@@ -12,6 +12,9 @@
         <Projects Include="McComponentsUniDAC.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="McComponentsZeos.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="McComponentsUniDAC:Make">
         <MSBuild Projects="McComponentsUniDAC.dproj" Targets="Make"/>
     </Target>
+    <Target Name="McComponentsZeos">
+        <MSBuild Projects="McComponentsZeos.dproj"/>
+    </Target>
+    <Target Name="McComponentsZeos:Clean">
+        <MSBuild Projects="McComponentsZeos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="McComponentsZeos:Make">
+        <MSBuild Projects="McComponentsZeos.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="McComponentsBase;McComponents;McComponentsUniDAC"/>
+        <CallTarget Targets="McComponentsBase;McComponents;McComponentsUniDAC;McComponentsZeos"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="McComponentsBase:Clean;McComponents:Clean;McComponentsUniDAC:Clean"/>
+        <CallTarget Targets="McComponentsBase:Clean;McComponents:Clean;McComponentsUniDAC:Clean;McComponentsZeos:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="McComponentsBase:Make;McComponents:Make;McComponentsUniDAC:Make"/>
+        <CallTarget Targets="McComponentsBase:Make;McComponents:Make;McComponentsUniDAC:Make;McComponentsZeos:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

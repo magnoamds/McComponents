@@ -62,7 +62,6 @@ object F_CrudDinamico: TF_CrudDinamico
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitHeight = 83
       object DBImage: TDBImage
         Left = 67
         Top = 0
@@ -73,7 +72,6 @@ object F_CrudDinamico: TF_CrudDinamico
         DataSource = DataSource
         Proportional = True
         TabOrder = 0
-        ExplicitHeight = 83
       end
       object btn_ClearImg: TButton
         Left = 3
@@ -103,7 +101,6 @@ object F_CrudDinamico: TF_CrudDinamico
       DataField = 'OBS'
       DataSource = DataSource
       TabOrder = 3
-      ExplicitHeight = 89
     end
     object btn_Pendencia: TButton
       Left = 121

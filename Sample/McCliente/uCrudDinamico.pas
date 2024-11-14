@@ -119,18 +119,17 @@ begin
       McMemTable.SQL.Add('SELECT *       ');
       McMemTable.SQL.Add('FROM produto   ');
       case cbx_Pesquisa.ItemIndex of
-        0: McMemTable.SQL.Add('WHERE id = :id ');
-        1: McMemTable.SQL.Add('WHERE UPPER(descricao) LIKE :descricao ');
+        0: begin
+             McMemTable.SQL.Add('WHERE id = :id ');
+             McMemTable.Params[0].AsInteger := StrToIntDef(edt_Pesquisa.Text, 0);
+           end;
+        1: begin
+             McMemTable.SQL.Add('WHERE UPPER(descricao) LIKE :descricao ');
+             McMemTable.Params[0].AsString := UpperCase(edt_Pesquisa.Text);
+           end;
       end;
+
       McMemTable.SQL.Add('ORDER BY ID DESC');
-
-      case cbx_Pesquisa.ItemIndex of
-//        0: McMemTable.ParamByName('id').AsInteger := StrToIntDef(edt_Pesquisa.Text, 0);
-//        1: McMemTable.ParamByName('descricao').AsString := UpperCase(edt_Pesquisa.Text);
-        0: McMemTable.Params[0].AsInteger := StrToIntDef(edt_Pesquisa.Text, 0);
-        1: McMemTable.Params[0].AsString := UpperCase(edt_Pesquisa.Text);
-      end;
-
       ///////////////
       DataSource.DataSet.Active := not DataSource.DataSet.Active;
       lFim := GetTickCount;

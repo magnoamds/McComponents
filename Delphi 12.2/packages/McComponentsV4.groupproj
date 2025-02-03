@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{54967053-CD2B-4EEE-8C54-0A3CA5F06AD0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="McComponentsBase.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="McComponents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="McComponentsUniDAC.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="McComponentsZeos.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="McComponentsBase">
+        <MSBuild Projects="McComponentsBase.dproj"/>
+    </Target>
+    <Target Name="McComponentsBase:Clean">
+        <MSBuild Projects="McComponentsBase.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="McComponentsBase:Make">
+        <MSBuild Projects="McComponentsBase.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="McComponents">
+        <MSBuild Projects="McComponents.dproj"/>
+    </Target>
+    <Target Name="McComponents:Clean">
+        <MSBuild Projects="McComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="McComponents:Make">
+        <MSBuild Projects="McComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="McComponentsUniDAC">
+        <MSBuild Projects="McComponentsUniDAC.dproj"/>
+    </Target>
+    <Target Name="McComponentsUniDAC:Clean">
+        <MSBuild Projects="McComponentsUniDAC.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="McComponentsUniDAC:Make">
+        <MSBuild Projects="McComponentsUniDAC.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="McComponentsZeos">
+        <MSBuild Projects="McComponentsZeos.dproj"/>
+    </Target>
+    <Target Name="McComponentsZeos:Clean">
+        <MSBuild Projects="McComponentsZeos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="McComponentsZeos:Make">
+        <MSBuild Projects="McComponentsZeos.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="McComponentsBase;McComponents;McComponentsUniDAC;McComponentsZeos"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="McComponentsBase:Clean;McComponents:Clean;McComponentsUniDAC:Clean;McComponentsZeos:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="McComponentsBase:Make;McComponents:Make;McComponentsUniDAC:Make;McComponentsZeos:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

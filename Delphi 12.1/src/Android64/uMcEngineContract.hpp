@@ -16,8 +16,6 @@
 #pragma pack(push,8)
 #include <System.hpp>
 #include <SysInit.hpp>
-#include <uMcParamsDB.hpp>
-#include <uMcTypes.hpp>
 #include <System.Classes.hpp>
 #include <Data.DB.hpp>
 
@@ -29,8 +27,6 @@ namespace Umcenginecontract
 __interface DELPHIINTERFACE IMcEngine;
 typedef System::DelphiInterface<IMcEngine> _di_IMcEngine;
 //-- type declarations -------------------------------------------------------
-using Umcparamsdb::TMcParamsDB;
-
 __interface  INTERFACE_UUID("{CC056AF1-2C82-4721-8B7B-FAF7D840291C}") IMcEngine  : public System::IInterface 
 {
 	virtual bool __fastcall InTransaction() = 0 ;

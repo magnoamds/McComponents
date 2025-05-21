@@ -21,7 +21,6 @@
 #include <Data.DB.hpp>
 #include <System.Generics.Collections.hpp>
 #include <uMcConnection.hpp>
-#include <uMcRestContract.hpp>
 #include <uMcCommons.hpp>
 #include <uMcTools.hpp>
 #include <uMcPrimaryKey.hpp>
@@ -44,8 +43,6 @@ using Umccache::TMcCached;
 using Umcprimarykey::TMcPrimaryKeys;
 
 using Umccommons::TMcEvent;
-
-using Umccommons::TMcCommons;
 
 class PASCALIMPLEMENTATION TMcBaseDataSet : public System::Classes::TPersistent
 {

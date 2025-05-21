@@ -38,7 +38,7 @@ private:
 	Umcdriverbase::TMcDriverBase* FDriver;
 	System::UnicodeString FMyContent;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
-	Umccommons::TMcStreamKey* FStreamKey;
+	System::UnicodeString FSecurityKey;
 	System::Classes::TNotifyEvent FBeforeExecute;
 	Umccommons::TMcEvent FOnError;
 	System::UnicodeString __fastcall GetAbout();
@@ -51,14 +51,13 @@ public:
 	__fastcall virtual TMcServer(System::Classes::TComponent* AOwner);
 	__fastcall virtual ~TMcServer();
 	System::UnicodeString __fastcall Resource(const System::UnicodeString AValue)/* overload */;
-	System::Classes::TStream* __fastcall Resource(System::Classes::TStream* const AValue)/* overload */;
 	__property System::UnicodeString MyContent = {read=FMyContent};
 	__property Umcparamsdb::TMcParamsDB* ParamsDB = {read=FMParamsDB};
-	__property Umccommons::TMcStreamKey* StreamKey = {read=FStreamKey, write=FStreamKey};
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout};
 	__property Umcdriverbase::TMcDriverBase* Driver = {read=FDriver, write=FDriver};
+	__property System::UnicodeString SecurityKey = {read=FSecurityKey, write=FSecurityKey};
 	__property System::Classes::TNotifyEvent BeforeExecute = {read=FBeforeExecute, write=FBeforeExecute};
 	__property Umccommons::TMcEvent OnError = {read=FOnError, write=FOnError};
 };

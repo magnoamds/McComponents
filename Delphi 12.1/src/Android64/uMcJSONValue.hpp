@@ -51,9 +51,11 @@ public:
 	__fastcall virtual ~TMcJSONValue();
 	static Umcjsoncontract::_di_IMcJSONValue __fastcall New(System::Json::TJSONObject* AJSONObject, System::UnicodeString APairName)/* overload */;
 	static Umcjsoncontract::_di_IMcJSONValue __fastcall New(System::Json::TJSONArray* AJSONArray, int AIndex)/* overload */;
+	System::Json::TJSONValue* __fastcall AsJSONValueNative();
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AsJSONObject();
 	Umcjsoncontract::_di_IMcJSONArray __fastcall AsJSONArray();
 	System::UnicodeString __fastcall AsString();
+	unsigned __int64 __fastcall AsUInt64();
 	__int64 __fastcall AsInt64();
 	int __fastcall AsInteger();
 	unsigned __fastcall AsCardinal();

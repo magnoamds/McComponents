@@ -51,9 +51,9 @@ requires
   ZParseSql;
 
 contains
-  uMcEngineZeos in '..\src\uMcEngineZeos.pas',
-  uMcDriverZeos in '..\src\uMcDriverZeos.pas',
-  uMcZMemTable in '..\src\uMcZMemTable.pas',
-  uMcZeosReg in '..\src\uMcZeosReg.pas';
+  uMcEngineZeos in '..\..\src\uMcEngineZeos.pas',
+  uMcDriverZeos in '..\..\src\uMcDriverZeos.pas',
+  uMcZMemTable in '..\..\src\uMcZMemTable.pas',
+  uMcZeosReg in '..\..\src\uMcZeosReg.pas';
 
 end.

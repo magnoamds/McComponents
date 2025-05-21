@@ -42,8 +42,6 @@ private:
 	__classmethod void __fastcall FieldToJSONValue(Data::Db::TField* const AField, Umcjson::IMcJSONObject AJSONObject);
 	__classmethod void __fastcall JSONValueToParam(Umcjson::IMcJSONValue AJSONValue, Data::Db::TParam* AParam);
 	__classmethod System::UnicodeString __fastcall FieldValueToString(Data::Db::TField* AField);
-	__classmethod void __fastcall EncryptStream(System::Classes::TStream* const ASource, System::Classes::TStream* const ATarget, Umccommons::TMcStreamKey* AStreamKey);
-	__classmethod void __fastcall DecryptStream(System::Classes::TStream* const ASource, System::Classes::TStream* const ATarget, Umccommons::TMcStreamKey* AStreamKey);
 	
 public:
 	static void __fastcall DecodeMDString(System::UnicodeString ASource, System::Classes::TStrings* AList);
@@ -63,12 +61,6 @@ public:
 	static Data::Db::TFieldAttributes __fastcall StringToFieldAttributes(System::UnicodeString AValue);
 	static System::UnicodeString __fastcall StreamToBase64(System::Classes::TStream* AStream);
 	static System::Classes::TStream* __fastcall Base64ToStream(System::UnicodeString ABase64);
-	static System::Classes::TStream* __fastcall JoinStream(System::DynamicArray<System::Classes::TStream*> AStreams);
-	static bool __fastcall SplitStream(System::Classes::TStream* ASource, System::DynamicArray<System::Classes::TStream*> AStreams);
-	static System::UnicodeString __fastcall OnEncryptToBase64(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
-	static System::UnicodeString __fastcall OnDecryptFromBase64(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
-	static System::Classes::TStream* __fastcall OnEncryptToStream(const System::UnicodeString AValue, Umccommons::TMcStreamKey* AStreamKey);
-	static System::UnicodeString __fastcall OnDecryptFromStream(System::Classes::TStream* const AValue, Umccommons::TMcStreamKey* AStreamKey);
 	static Umcjson::IMcJSONArray __fastcall FieldDefsToJSONArray(Data::Db::TDataSet* ADataSet);
 	static void __fastcall JSONArrayToFieldDefs(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);
 	static void __fastcall ConfigProviderFlags(Umcjson::IMcJSONArray AJSONArray, Data::Db::TDataSet* ADataSet);

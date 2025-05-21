@@ -61,7 +61,8 @@ public:
 	Umcjsoncontract::_di_IMcJSONArray __fastcall Add(const Umcjsoncontract::_di_IMcJSONArray AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddJSONObject();
 	Umcjsoncontract::_di_IMcJSONArray __fastcall AddJSONArray();
-	System::Json::TJSONArray* __fastcall ToJSONArray(const bool ASelfOwns = false);
+	System::Json::TJSONArray* __fastcall Clone();
+	System::Json::TJSONArray* __fastcall ToJSONNative(const bool ASelfOwns = false);
 	System::UnicodeString __fastcall Stringify();
 	bool __fastcall Contains(const int AIndex);
 	Umcjsoncontract::_di_IMcJSONArray __fastcall Delete(const int AIndex);

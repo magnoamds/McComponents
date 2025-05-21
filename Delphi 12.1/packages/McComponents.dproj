@@ -151,7 +151,7 @@
         <DCCReference Include="FireDACCommonDriver.dcp"/>
         <DCCReference Include="FireDACCommon.dcp"/>
         <DCCReference Include="McComponentsBase.dcp"/>
-        <DCCReference Include="..\src\uMcComponentReg.pas"/>
+        <DCCReference Include="..\..\src\uMcComponentReg.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

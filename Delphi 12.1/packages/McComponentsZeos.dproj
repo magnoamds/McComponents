@@ -154,10 +154,10 @@
         <DCCReference Include="ZPlain.dcp"/>
         <DCCReference Include="ZCore.dcp"/>
         <DCCReference Include="ZParseSql.dcp"/>
-        <DCCReference Include="..\src\uMcEngineZeos.pas"/>
-        <DCCReference Include="..\src\uMcDriverZeos.pas"/>
-        <DCCReference Include="..\src\uMcZMemTable.pas"/>
-        <DCCReference Include="..\src\uMcZeosReg.pas"/>
+        <DCCReference Include="..\..\src\uMcEngineZeos.pas"/>
+        <DCCReference Include="..\..\src\uMcDriverZeos.pas"/>
+        <DCCReference Include="..\..\src\uMcZMemTable.pas"/>
+        <DCCReference Include="..\..\src\uMcZeosReg.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

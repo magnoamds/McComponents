@@ -48,6 +48,6 @@ requires
   McComponentsBase;
 
 contains
-  uMcComponentReg in '..\src\uMcComponentReg.pas';
+  uMcComponentReg in '..\..\src\uMcComponentReg.pas';
 
 end.

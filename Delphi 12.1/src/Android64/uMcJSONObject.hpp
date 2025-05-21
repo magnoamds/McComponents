@@ -48,6 +48,7 @@ public:
 	Umcjsoncontract::_di_IMcJSONObject __fastcall Parse(const System::UnicodeString AJSONString);
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, System::Json::TJSONValue* const AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const System::UnicodeString AValue)/* overload */;
+	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const unsigned __int64 AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const __int64 AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const int AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const unsigned AValue)/* overload */;
@@ -59,7 +60,8 @@ public:
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const Umcjsoncontract::_di_IMcJSONArray AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONObject __fastcall AddJSONObject(const System::UnicodeString AName);
 	Umcjsoncontract::_di_IMcJSONArray __fastcall AddJSONArray(const System::UnicodeString AName);
-	System::Json::TJSONObject* __fastcall ToJSONObject(const bool ASelfOwns = false);
+	System::Json::TJSONObject* __fastcall Clone();
+	System::Json::TJSONObject* __fastcall ToJSONNative(const bool ASelfOwns = false);
 	System::UnicodeString __fastcall Stringify();
 	bool __fastcall Contains(const System::UnicodeString AName);
 	Umcjsoncontract::_di_IMcJSONObject __fastcall Delete(const System::UnicodeString AName);

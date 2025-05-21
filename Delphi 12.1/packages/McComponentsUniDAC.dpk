@@ -30,25 +30,19 @@ package McComponentsUniDAC;
 {$IMPLICITBUILD ON}
 
 requires
-  {$IFDEF MsWindows}
-    {$IFDEF Win32}
-    designide,
-    {$ENDIF}
-  {$ENDIF}
+  designide,
   rtl,
   bindengine,
   soaprtl,
   dbrtl,
   bindcomp,
   RESTComponents,
-  McComponentsBase,
-  dac290,
-  unidac290;
+  McComponentsBase;
 
 contains
-  uMcDriverUniDAC in '..\src\uMcDriverUniDAC.pas',
-  uMcVirtualTable in '..\src\uMcVirtualTable.pas',
-  uMcEngineUniDAC in '..\src\uMcEngineUniDAC.pas',
-  uMcUniDACReg in '..\src\uMcUniDACReg.pas';
+  uMcDriverUniDAC in '..\..\src\uMcDriverUniDAC.pas',
+  uMcVirtualTable in '..\..\src\uMcVirtualTable.pas',
+  uMcEngineUniDAC in '..\..\src\uMcEngineUniDAC.pas',
+  uMcUniDACReg in '..\..\src\uMcUniDACReg.pas';
 
 end.

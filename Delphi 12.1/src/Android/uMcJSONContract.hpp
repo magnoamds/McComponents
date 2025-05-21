@@ -32,9 +32,11 @@ typedef System::DelphiInterface<IMcJSONArray> _di_IMcJSONArray;
 //-- type declarations -------------------------------------------------------
 __interface  INTERFACE_UUID("{129B85E0-1026-4E34-A94B-FFE6AC2D176A}") IMcJSONValue  : public System::IInterface 
 {
+	virtual System::Json::TJSONValue* __fastcall AsJSONValueNative() = 0 ;
 	virtual _di_IMcJSONObject __fastcall AsJSONObject() = 0 ;
 	virtual _di_IMcJSONArray __fastcall AsJSONArray() = 0 ;
 	virtual System::UnicodeString __fastcall AsString() = 0 ;
+	virtual unsigned __int64 __fastcall AsUInt64() = 0 ;
 	virtual __int64 __fastcall AsInt64() = 0 ;
 	virtual int __fastcall AsInteger() = 0 ;
 	virtual unsigned __fastcall AsCardinal() = 0 ;
@@ -54,6 +56,7 @@ public:
 	virtual _di_IMcJSONObject __fastcall Parse(const System::UnicodeString AJSONString) = 0 ;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, System::Json::TJSONValue* const AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const System::UnicodeString AValue) = 0 /* overload */;
+	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const unsigned __int64 AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const __int64 AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const int AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const unsigned AValue) = 0 /* overload */;
@@ -65,7 +68,8 @@ public:
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const _di_IMcJSONArray AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddJSONObject(const System::UnicodeString AName) = 0 ;
 	virtual _di_IMcJSONArray __fastcall AddJSONArray(const System::UnicodeString AName) = 0 ;
-	virtual System::Json::TJSONObject* __fastcall ToJSONObject(const bool ASelfOwns = false) = 0 ;
+	virtual System::Json::TJSONObject* __fastcall Clone() = 0 ;
+	virtual System::Json::TJSONObject* __fastcall ToJSONNative(const bool ASelfOwns = false) = 0 ;
 	virtual System::UnicodeString __fastcall Stringify() = 0 ;
 	virtual bool __fastcall Contains(const System::UnicodeString AName) = 0 ;
 	virtual _di_IMcJSONObject __fastcall Delete(const System::UnicodeString AName) = 0 ;
@@ -96,7 +100,8 @@ public:
 	virtual _di_IMcJSONArray __fastcall Add(const _di_IMcJSONArray AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddJSONObject() = 0 ;
 	virtual _di_IMcJSONArray __fastcall AddJSONArray() = 0 ;
-	virtual System::Json::TJSONArray* __fastcall ToJSONArray(const bool ASelfOwns = false) = 0 ;
+	virtual System::Json::TJSONArray* __fastcall Clone() = 0 ;
+	virtual System::Json::TJSONArray* __fastcall ToJSONNative(const bool ASelfOwns = false) = 0 ;
 	virtual System::UnicodeString __fastcall Stringify() = 0 ;
 	virtual bool __fastcall Contains(const int AIndex) = 0 ;
 	virtual _di_IMcJSONArray __fastcall Delete(const int AIndex) = 0 ;

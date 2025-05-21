@@ -147,12 +147,10 @@
         <DCCReference Include="bindcomp.dcp"/>
         <DCCReference Include="RESTComponents.dcp"/>
         <DCCReference Include="McComponentsBase.dcp"/>
-        <DCCReference Include="dac290.dcp"/>
-        <DCCReference Include="unidac290.dcp"/>
-        <DCCReference Include="..\src\uMcDriverUniDAC.pas"/>
-        <DCCReference Include="..\src\uMcVirtualTable.pas"/>
-        <DCCReference Include="..\src\uMcEngineUniDAC.pas"/>
-        <DCCReference Include="..\src\uMcUniDACReg.pas"/>
+        <DCCReference Include="..\..\src\uMcDriverUniDAC.pas"/>
+        <DCCReference Include="..\..\src\uMcVirtualTable.pas"/>
+        <DCCReference Include="..\..\src\uMcEngineUniDAC.pas"/>
+        <DCCReference Include="..\..\src\uMcUniDACReg.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

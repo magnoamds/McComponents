@@ -92,10 +92,9 @@ private:
 	TMcBasicAuthentication* FBasicAuthentication;
 	TMcProxy* FProxy;
 	System::UnicodeString FMyContent;
+	System::UnicodeString FSecurityKey;
 	int FTimeout;
 	Umcparamsdb::TMcParamsDB* FMParamsDB;
-	bool FBinary;
-	Umccommons::TMcStreamKey* FStreamKey;
 	System::Classes::TNotifyEvent FOnBeforeConnect;
 	System::UnicodeString __fastcall GetAbout();
 	System::UnicodeString __fastcall GetBaseURL();
@@ -111,7 +110,6 @@ public:
 	bool __fastcall FileUpload(System::Classes::TStream* const AFile, const System::UnicodeString AName, const System::UnicodeString ADirectory = System::UnicodeString())/* overload */;
 	System::Classes::TStream* __fastcall FileDownload(const System::UnicodeString AName, const System::UnicodeString ADirectory = System::UnicodeString());
 	Umcjson::IMcJSONArray __fastcall FileList(const System::UnicodeString ADirectory = System::UnicodeString());
-	__property Umccommons::TMcStreamKey* StreamKey = {read=FStreamKey, write=FStreamKey};
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout};
@@ -120,9 +118,9 @@ __published:
 	__property TMcBasicAuthentication* BasicAuthentication = {read=FBasicAuthentication, write=FBasicAuthentication};
 	__property TMcProxy* Proxy = {read=FProxy, write=FProxy};
 	__property System::UnicodeString MyContent = {read=FMyContent, write=FMyContent};
+	__property System::UnicodeString SecurityKey = {read=FSecurityKey, write=FSecurityKey};
 	__property int Timeout = {read=FTimeout, write=FTimeout, default=30000};
 	__property Umcparamsdb::TMcParamsDB* ParamsDB = {read=FMParamsDB, write=FMParamsDB};
-	__property bool Binary = {read=FBinary, write=FBinary, default=1};
 	__property System::Classes::TNotifyEvent OnBeforeConnect = {read=FOnBeforeConnect, write=FOnBeforeConnect};
 };
 

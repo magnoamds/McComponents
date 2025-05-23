@@ -1,0 +1,57 @@
+package McComponentsZeos;
+
+{$R *.res}
+{$R '..\src\McComponents.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'McComponents - Zeos'}
+{$IMPLICITBUILD ON}
+
+requires
+  {$IFDEF WIN32}
+  designide,
+  {$ENDIF}
+  rtl,
+  bindengine,
+  xmlrtl,
+  soaprtl,
+  dbrtl,
+  inet,
+  bindcomp,
+  RESTComponents,
+  McComponentsBase,
+  ZComponent,
+  ZDbc,
+  ZPlain,
+  ZCore,
+  ZParseSql;
+
+contains
+  uMcEngineZeos in '..\..\src\uMcEngineZeos.pas',
+  uMcDriverZeos in '..\..\src\uMcDriverZeos.pas',
+  uMcZMemTable in '..\..\src\uMcZMemTable.pas',
+  uMcZeosReg in '..\..\src\uMcZeosReg.pas';
+
+end.

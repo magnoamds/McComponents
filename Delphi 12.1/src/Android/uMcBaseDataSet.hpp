@@ -62,7 +62,6 @@ private:
 	Umcjson::IMcJSONObject FJSONRecord;
 	TMcPrimaryKeys* FMcPrimaryKeys;
 	Umctypes::TMcOperation FOperation;
-	Umcjson::IMcJSONArray FJSONReturn;
 	void __fastcall SetSQL(System::Classes::TStrings* const AValue);
 	void __fastcall SetMcPrimaryKeys(TMcPrimaryKeys* const AValue);
 	void __fastcall OnOnChangeSQL(System::TObject* Sender);

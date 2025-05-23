@@ -81,6 +81,7 @@ public:
 	HIDESBASE Data::Db::TParam* __fastcall ParamByName(const System::UnicodeString Value);
 	
 __published:
+	__property FieldDefs;
 	__property Active = {default=0};
 	__property LinkedFields = {default=0};
 	__property MasterFields = {default=0};

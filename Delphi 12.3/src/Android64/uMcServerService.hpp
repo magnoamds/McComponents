@@ -21,6 +21,7 @@
 #include <Data.DB.hpp>
 #include <System.Generics.Collections.hpp>
 #include <System.IOUtils.hpp>
+#include <System.Types.hpp>
 #include <uMcJSON.hpp>
 #include <uMcTypes.hpp>
 #include <uMcEngineContract.hpp>

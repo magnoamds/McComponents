@@ -46,7 +46,6 @@ public:
 	__fastcall TMcJSONArray();
 	__fastcall virtual ~TMcJSONArray();
 	static Umcjsoncontract::_di_IMcJSONArray __fastcall New();
-	Umcjsoncontract::_di_IMcJSONArray __fastcall SetPointer(System::Json::TJSONValue* const AJSONValue);
 	Umcjsoncontract::_di_IMcJSONArray __fastcall Parse(const System::UnicodeString AJSONString);
 	Umcjsoncontract::_di_IMcJSONArray __fastcall Add(System::Json::TJSONValue* const AValue)/* overload */;
 	Umcjsoncontract::_di_IMcJSONArray __fastcall Add(const System::UnicodeString AValue)/* overload */;

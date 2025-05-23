@@ -34,7 +34,6 @@
 #include <uMcJSONObject.hpp>
 #include <uMcJSONValue.hpp>
 #include <uMcTypes.hpp>
-#include <uMcULID.hpp>
 #include <uMcBaseSQLStrings.hpp>
 #include <uMcDriverBase.hpp>
 #include <uMcServerContract.hpp>
@@ -46,7 +45,7 @@
 #include <uMcServer.hpp>
 #include <uMcBaseDataSet.hpp>
 // SO_PFX: bpl
-// PRG_EXT: .so
+// PRG_EXT: .a
 // OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\23.0\Dcp\Android64
 // OBJ_EXT: .o
 

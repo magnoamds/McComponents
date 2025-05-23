@@ -28,7 +28,6 @@ namespace Umccommons
 {
 //-- forward type declarations -----------------------------------------------
 class DELPHICLASS TMcCommons;
-class DELPHICLASS TMcStreamKey;
 //-- type declarations -------------------------------------------------------
 typedef System::DelphiInterface<System::Sysutils::TFunc__1<Umcenginecontract::_di_IMcEngine> > TMcFuncEngine;
 
@@ -49,24 +48,6 @@ public:
 	/* TObject.Create */ inline __fastcall TMcCommons() : System::TObject() { }
 	/* TObject.Destroy */ inline __fastcall virtual ~TMcCommons() { }
 	
-};
-
-
-class PASCALIMPLEMENTATION TMcStreamKey : /*[[sealed]]*/ public System::TObject
-{
-	typedef System::TObject inherited;
-	
-private:
-	int FStartKey;
-	int FMultKey;
-	int FAddKey;
-	
-public:
-	__fastcall TMcStreamKey();
-	__fastcall virtual ~TMcStreamKey();
-	__property int StartKey = {read=FStartKey, write=FStartKey, nodefault};
-	__property int MultKey = {read=FMultKey, write=FMultKey, nodefault};
-	__property int AddKey = {read=FAddKey, write=FAddKey, nodefault};
 };
 
 

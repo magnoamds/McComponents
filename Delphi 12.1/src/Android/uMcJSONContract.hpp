@@ -52,7 +52,6 @@ __interface  INTERFACE_UUID("{BD9FF7F2-7549-4CDF-83FA-9768358DC6B1}") IMcJSONObj
 	
 public:
 	_di_IMcJSONValue operator[](System::UnicodeString Name) { return this->Values[Name]; }
-	virtual _di_IMcJSONObject __fastcall SetPointer(System::Json::TJSONValue* const AJSONValue) = 0 ;
 	virtual _di_IMcJSONObject __fastcall Parse(const System::UnicodeString AJSONString) = 0 ;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, System::Json::TJSONValue* const AValue) = 0 /* overload */;
 	virtual _di_IMcJSONObject __fastcall AddPair(const System::UnicodeString AName, const System::UnicodeString AValue) = 0 /* overload */;
@@ -85,7 +84,6 @@ __interface  INTERFACE_UUID("{A4E4A08C-6768-4BEC-AFF4-C0368C4C69DE}") IMcJSONArr
 	
 public:
 	_di_IMcJSONValue operator[](int Index) { return this->Items[Index]; }
-	virtual _di_IMcJSONArray __fastcall SetPointer(System::Json::TJSONValue* const AJSONValue) = 0 ;
 	virtual _di_IMcJSONArray __fastcall Parse(const System::UnicodeString AJSONString) = 0 ;
 	virtual _di_IMcJSONArray __fastcall Add(System::Json::TJSONValue* const AValue) = 0 /* overload */;
 	virtual _di_IMcJSONArray __fastcall Add(const System::UnicodeString AValue) = 0 /* overload */;

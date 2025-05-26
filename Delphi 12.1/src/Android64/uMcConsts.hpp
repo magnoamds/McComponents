@@ -28,6 +28,7 @@ namespace Umcconsts
 #define _MC_VERSION u"4.0.0"
 static _DELPHI_CONST System::WideChar _MC_COMPATIBILITY = (System::WideChar)(0x34);
 #define _AVISO u"The evaluation period has expired!"
+#define _CONTENT_TYPE_JSON u"application/json; charset=utf8"
 #define _KEY_ACTIVE u"active"
 #define _KEY_MYCONTENT u"myContent"
 #define _KEY_SECURITYKEY u"securitykey"

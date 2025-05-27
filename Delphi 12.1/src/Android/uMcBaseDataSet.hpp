@@ -65,6 +65,7 @@ private:
 	void __fastcall SetSQL(System::Classes::TStrings* const AValue);
 	void __fastcall SetMcPrimaryKeys(TMcPrimaryKeys* const AValue);
 	void __fastcall OnOnChangeSQL(System::TObject* Sender);
+	void __fastcall RefreshDetail();
 	System::UnicodeString __fastcall GetAbout();
 	System::Classes::TStrings* __fastcall GetSQL();
 	void __fastcall ExecSQL();
